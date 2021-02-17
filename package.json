@@ -23,7 +23,8 @@
       "cordova-plugin-device": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "dependencies": {

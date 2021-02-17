@@ -31,12 +31,16 @@ function onDeviceReady() {
 
 function buttonclick () {
     console.log("hello apple Plugin button clicked");
+    
     var mapParms = {
       address: "Cane Garden Country club",
       gisLong: -81.99463648,
       gisLat: 28.89330536,
-      travelType: 0 
+      travelType: 0 // car 0, golf cart 1
     };
+    mapParms.address = "2886 Petoskey PL.";
+    mapParms.gisLong = -82.027396242;
+    mapParms.gisLat = 28.848607530;
 
     if (window.cordova.platformId == "android"){
         // call map library.
