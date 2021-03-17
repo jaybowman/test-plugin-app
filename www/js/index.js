@@ -31,6 +31,19 @@ function onDeviceReady() {
 
 function buttonclick () {
     console.log("hello apple Plugin button clicked");
+
+    // testing with maplaunch.js
+    // window.plugins.launcher.coolMethod("pass message to android",  
+    //   function(data){
+    //     alert (data);
+    //     return false;
+    //   }, 
+    //   function(errorMsg) {
+    //     //errorCallback 
+    //     alert("Error! " + errorMsg);
+    //     return;
+    //   });
+      
     
     var mapParms = {
       address: "Cane Garden Country club",
@@ -45,8 +58,8 @@ function buttonclick () {
     if (window.cordova.platformId == "android"){
         // call map library.
         window.plugins.launcher.launch({
-          packageName: "com.thevillages.testplugin",
-          activityName: "com.thevillages.maplibrary.MapNavActivity",
+          packageName: "com.thevillages.maplib",
+          activityName: "com.thevillages.maplib.MapNavActivity",
           extras: [
               {"name": "ADDRESS", "value": mapParms.address, "dataType": "String"},
               {"name": "GISLAT", "value": mapParms.gisLat, "dataType": "Double"},
@@ -55,6 +68,7 @@ function buttonclick () {
           ]
         }, 
         function(data){
+          alert ("success " + data);
           return false;
         }, function(errorMsg) {
           //errorCallback 

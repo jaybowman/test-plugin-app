@@ -13,24 +13,25 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
+    "cordova-android": "^9.0.0",
     "cordova-ios": "^6.1.1",
+    "cordova-plugin-arcmap": "file:../cordova-plugin-arcmap",
     "cordova-plugin-whitelist": "^1.3.4"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-add-swift-support": {},
-      "cordova-plugin-device": {}
+      "cordova-plugin-device": {},
+      "cordova-plugin-arcmap": {}
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "dependencies": {
-    "cordova-android": "9.0.0",
     "cordova-plugin-add-swift-support": "2.0.2",
-    "cordova-plugin-app-launcher": "file:../cordova-plugin-app-launcher",
     "cordova-plugin-device": "2.0.3"
   }
 }
