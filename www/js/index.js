@@ -46,14 +46,12 @@ function buttonclick () {
       
     
     var mapParms = {
-      address: "Cane Garden Country club",
-      gisLong: -81.99463648,
-      gisLat: 28.89330536,
+      stops: [ {name: "start at mvp brownwood ", gisLong: -82.02373937, gisLat: 28.84617393},
+                {name:"2886 Petoskey PL.", gisLong: -82.027396242, gisLat: 28.848607530 },
+                {name:"5748 BARRAW TERRACE", gisLong: -81.969576550, gisLat: 28.793533750} ],
+      
       travelType: 0 // car 0, golf cart 1
-    };
-    mapParms.address = "2886 Petoskey PL.";
-    mapParms.gisLong = -82.027396242;
-    mapParms.gisLat = 28.848607530;
+    };    
 
     if (window.cordova.platformId == "android"){
         // call map library.
@@ -61,10 +59,10 @@ function buttonclick () {
           packageName: "com.thevillages.maplib",
           activityName: "com.thevillages.maplib.MapNavActivity",
           extras: [
-              {"name": "ADDRESS", "value": mapParms.address, "dataType": "String"},
-              {"name": "GISLAT", "value": mapParms.gisLat, "dataType": "Double"},
-              {"name": "GISLONG", "value": mapParms.gisLong, "dataType": "Double"},
-              {"name": "TRAVEL_TYPE", "value": mapParms.travelType, "dataType": "Int"}
+            {name: "start at mvp brownwood ", gisLong: -82.02373937, gisLat: 28.84617393, dataType: "VillageLocation"},
+            {name:"2886 Petoskey PL.", gisLong: -82.027396242, gisLat: 28.848607530,dataType: "VillageLocation" },
+            {name:"5748 BARRAW TERRACE", gisLong: -81.969576550, gisLat: 28.793533750, dataType: "VillageLocation"}, 
+            {name: "travelType", value: 0, dateType: "integer"}           
           ]
         }, 
         function(data){
