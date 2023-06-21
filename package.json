@@ -13,7 +13,8 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^9.1.0",
+    "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0",
     "cordova-plugin-arcmap": "file:../cordova-plugin-arcmap",
     "cordova-plugin-whitelist": "^1.3.4"
   },
@@ -25,7 +26,8 @@
       "cordova-plugin-arcmap": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "browser"
     ]
   },
   "dependencies": {
